@@ -1,0 +1,250 @@
+body {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+    color: #1486dd73;
+    background-color: #CFE3E2;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0; /* Remove default margin */
+    padding: 0;
+}
+  
+/* Title Section */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+}
+
+.title-barcelona {
+    margin-bottom: -1.1rem;
+    z-index: 1;
+    padding: 0 1rem;
+}
+
+.title-content, .mobile-version {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .6px;
+    margin: 0;
+}
+
+.title-content h2, .mobile-version h2 {
+    color:#fff;
+    text-align: center;
+    background-color:#1486dd73;
+    padding: 1rem;
+    width: 100%;
+    
+}
+.title-content img, .mobile-version img {
+    opacity: 0.7;
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+    margin: 0;
+}
+
+.mobile-version {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .title-container {
+        justify-content: center;
+    }
+
+    .title-barcelona {
+        text-align: center;
+    }
+
+    .title-content {
+        display: none;
+        /* order: -1; if I want the image to stay */
+    }
+
+    .mobile-version {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mobile-version img {
+        opacity: 0.6;
+        width: 40%;
+        height: auto;
+        margin: 0;
+    }
+
+    .meet-up, .zen-out {
+        margin-bottom: -.5rem;
+        font-size: 1.3rem;
+    }
+    }
+
+/* Main Content */
+.boxed-paragraph {
+    text-align: center;
+    padding: .6rem 3rem;
+    font-family: 'Nunito', sans-serif;
+    color:#1486dde8;
+    font-size: 2rem;
+    border-top: .3rem solid #1486dd73; /* Define the border style and color */
+    border-bottom: .3rem solid #1486dd73;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .boxed-paragraph {
+        font-size: 1.2rem;
+        padding: .6rem 1rem;
+    }
+}
+    
+/* Events section */
+.events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.events > div { 
+    flex: 0 1 100%; /* each div takes up full width of container */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .2rem;
+}
+
+.events img {
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+}
+
+.events h1, .events h3 {
+    text-align: center;
+    justify-content: center;
+    padding: 0 3rem;
+}
+
+.candlelight-med {
+    border-left: .2rem solid #1486dd73;
+    border-right: .2rem solid #1486dd73;
+    padding: .6rem;
+}
+
+.morning-med {
+    padding-top: .7rem;
+}
+
+.morning-med h1, .surprise h1 {
+    margin-bottom: -.4rem;
+}
+
+@media screen and (max-width: 600px) {
+    .events {
+        flex-direction: column;
+    }
+
+    .events > div {
+        flex: 0 1 100%; /* each div takes up full width of its container */
+    }
+
+    .events img {
+        width: 90%;
+        height: auto;
+    }
+    
+    .morning-med {
+        padding-top: 1.5rem;
+    }
+
+    .candlelight-med {
+       border: none;
+    }
+
+    .candlelight-med img {
+        order: -1;
+    }
+
+    .events h3 {
+        margin-top: -.65rem;
+    }
+
+    .morning-med h1, .surprise h1 {
+        margin-bottom: 1.2rem;
+}
+}
+
+/* Footer */
+.footer {
+    border-top: .3rem solid #1486dd73;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.contact li {
+    padding: 1rem;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.contact li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+  
+.contact li a:hover .updates,
+.contact li a:hover .visuals,
+.contact li a:hover .email {
+    text-decoration: underline;
+  }
+
+.contact li .fab.fa-whatsapp, 
+.updates {
+    color: #70b0ad;
+  }
+
+.contact li .fab.fa-instagram,
+.visuals {
+    color: #d2a4a1;
+}
+
+.contact li .far.fa-envelope,
+.email {
+    color: #b3afab;
+}
+.contact li .fa-whatsapp, 
+.contact li .fa-instagram,
+.contact li .fa-envelope {
+    margin-right: .5rem;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 480px) {
+    .updates, .visuals, .email {
+        display: none;
+        margin: 0;
+    }
+
+    .contact li {
+        margin-left: 1rem;
+        margin-right: 3rem; 
+        padding: 0.5rem;
+    }
+
+    .contact li .fa-whatsapp, 
+    .contact li .fa-instagram,
+    .contact li .fa-envelope {
+        margin-right: 0; /* Remove margin-right for centering */
+    }
+}
